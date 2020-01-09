@@ -11,6 +11,7 @@ import Auth from '../components/pages/Auth/Auth';
 import Home from '../components/pages/Home/Home';
 import MyStuff from '../components/pages/MyStuff/MyStuff';
 import NewStuff from '../components/pages/NewStuff/NewStuff';
+import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 
 import './App.scss';
 
@@ -50,6 +51,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
+          <MyNavbar authed={authed} />
           <Switch>
             <PrivateRoute path="/home" exact component={Home} authed={authed} />
             <PrivateRoute path="/stuff/new" exact component={NewStuff} authed={authed} />
