@@ -40,7 +40,7 @@ class App extends React.Component {
     });
   }
 
-  componentWillUpdate() {
+  componentWillUnmount() {
     this.removeListener();
   }
 
