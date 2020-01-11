@@ -12,6 +12,8 @@ import Home from '../components/pages/Home/Home';
 import MyStuff from '../components/pages/MyStuff/MyStuff';
 import NewStuff from '../components/pages/NewStuff/NewStuff';
 import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
+import EditButton from '../components/pages/EditButton/EditButton';
+import SingleButton from '../components/pages/SingleButton/SingleButton';
 
 import './App.scss';
 
@@ -57,6 +59,8 @@ class App extends React.Component {
             <PrivateRoute path="/stuff/new" exact component={NewStuff} authed={authed} />
             <PrivateRoute path="/stuff" exact component={MyStuff} authed={authed} />
             <PublicRoute path="/auth" exact component={Auth} authed={authed} />
+            <PrivateRoute path="/stuff/12345/edit" exact component={EditButton} authed={authed} />
+            <PrivateRoute path="/stuff/12345" exact component={SingleButton} authed={authed} />
           </Switch>
         </Router>
       </div>
